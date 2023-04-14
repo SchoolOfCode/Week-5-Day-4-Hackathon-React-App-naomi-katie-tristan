@@ -7,13 +7,12 @@
   box-sizing: border-box;
   color: #D33A2C;
   cursor: pointer;
-
   display: flex;
   font-size: 1rem;
   font-weight: 700;
   line-height: 30px;
   list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg) none;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 2rem;
   text-decoration: none;
   text-shadow: none;
   text-underline-offset: 1px;
@@ -21,8 +20,8 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-
   word-break: break-word;
+  margin: 0 0 0 1rem; /* Margin is the space between the input field and the button */
 }
 
 .AddButton:active,

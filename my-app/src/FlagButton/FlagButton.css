@@ -1,5 +1,5 @@
 
-.DeleteButton {
+.FlagButton {
 
     background-color: #FFE7E7;
     border: 1px solid #FEE0E0;
@@ -12,7 +12,7 @@
     font-weight: 700;
     line-height: 30px;
     list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg) none;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0.6rem;
     text-decoration: none;
     text-shadow: none;
     text-underline-offset: 1px;
@@ -20,31 +20,31 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    margin: 0 0 0 1rem; 
     word-break: break-word;
+    margin: 0 0 0 1rem; /* Margin is the space between the input field and the button */
   }
   
-  .DeleteButton:active,
-  .DeleteButton:hover,
-  .DeleteButton:focus {
+  .FlagButton:active,
+  .FlagButton:hover,
+  .FlagButton:focus {
     outline: 0;
   }
   
   
-  .DeleteButton:active {
+  .FlagButton:active {
     background-color: #D33A2C;
     box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
     color: #FFFFFF;
   }
   
-  .DeleteButton:hover {
+  .FlagButton:hover {
     background-color: #FFE3E3;
     border-color: #FAA4A4;
   }
   
-  .DeleteButton:active:hover,
-  .DeleteButton:focus:hover,
-  .DeleteButton:focus {
+  .FlagButton:active:hover,
+  .FlagButton:focus:hover,
+  .FlagButton:focus {
     background-color: #D33A2C;
     box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
     color: #FFFFFF;

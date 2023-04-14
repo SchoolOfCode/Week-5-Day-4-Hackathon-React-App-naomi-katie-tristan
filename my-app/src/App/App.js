@@ -8,6 +8,7 @@ import "./App.css";
 function App() {
   const [inputValue, setInputValue] = useState(""); // This is the state variable for the input field.  
   const [items, setItems] = useState([]);  // This is the state variable for the items array. 
+  const [flag, setFlag] = useState("");  // This is the state variable for the flag array.
   const [idCounter, setIdCounter] = useState(0);  // This is the state variable for the idCounter. 
 
   const handleAddItem = () => {  // This function is called when the user clicks the Add button or presses the Enter key. (The onEnter prop of the Input component is set to this function.)
@@ -26,6 +27,15 @@ function App() {
   setItems(newItems); // Update the items array. (Set the value of the items state variable to the new array.)
 };
 
+const handleFlag= (event) => { // This function adds a heart emoji to the item that is clicked on.
+  if (event.target.value === "Flag") { // If the button is clicked, add a heart emoji to the item.
+  setFlag("💗");
+  } else { // If the button is clicked again, remove the heart emoji from the item.
+  setFlag("");
+  }
+};
+
+
 return (
     <div className="App"> 
       <h1>My List</h1>
@@ -38,7 +48,9 @@ return (
       <AddButton label="Add" onClick={handleAddItem} />
       </div>
 
-      <List items={items} onDelete={handleDeleteItem} />
+      <List items={items} onDelete={handleDeleteItem} onFlag={handleFlag} />
+      
+      
     </div>
   );
 }

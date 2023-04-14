@@ -1,5 +1,6 @@
 import React from "react";
 import DeleteButton from "../Button/index.js";
+import FlagButton from "../FlagButton/Index.js";
 import "./ListItem.css";
 
 function ListItem(props) {
@@ -8,6 +9,8 @@ function ListItem(props) {
     <div className="listItem">
       {props.value}
       <DeleteButton label="Delete" onClick={props.onDelete} />
+      <FlagButton label="💗" onClick={props.onFlag} />
+
     </div>
     </li>
   );
