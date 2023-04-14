@@ -1,20 +1,31 @@
-import React from "react";
-import './App.css';
-import List from "../List/Index.js";
-import ListItem from "../List Item/Index.js";
-import Button from "../Button/index"; // shut the fuck up
+import React, { useState } from "react";
 import Input from "../Input/Index.js";
-import { useState } from 'react'
+import AddButton from "../AddButton/Index.js";
+import List from "../List/Index.js"
 
+import "./App.css";
 
 function App() {
+  const [inputValue, setInputValue] = useState("");
+  const [items, setItems] = useState([]);
 
+  const handleAddItem = () => {
+    const newItem = { id: Date.now(), value: inputValue };
+    setItems([...items, newItem]);
+    setInputValue("");
+  };
 
+  const handleDeleteItem = (id) => {
+    const newItems = items.filter((item) => item.id !== id);
+    setItems(newItems);
+  };
 
   return (
     <div className="App">
-    <Input />
-
+      <h1>My List</h1>
+      <Input value={inputValue} onChange={setInputValue} />
+      <AddButton label="Add" onClick={handleAddItem} />
+      <List items={items} onDelete={handleDeleteItem} />
     </div>
   );
 }

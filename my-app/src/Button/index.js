@@ -7,5 +7,4 @@ function DeleteButton(props) {
     </button>
   );
 }
-
 export default DeleteButton;
