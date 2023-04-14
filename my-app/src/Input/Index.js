@@ -1,40 +1,23 @@
 import React from "react";
-import { useState } from "react";
-
-import "./Input.css";
 
 function Input(props) {
-  const [inputValue, setInputValue] = useState("");
-  const [items, setItems] = useState([]);
-
-  const handleButtonClick = () => {
-    const newItem = { id: Date.now(), value: inputValue };
-    setItems([...items, newItem]);
-    setInputValue("");
+  const handleInputChange = (e) => {
+    props.onChange(e.target.value);
   };
 
-  const handleDeleteItem = (id) => {
-    const newItems = items.filter((item) => item.id !== id);
-    setItems(newItems);
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      props.onEnter();
+    }
   };
 
   return (
-    <div className="Input">
-      <input
-        type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <button onClick={handleButtonClick}>Add button</button>
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            {item.value}
-            <button onClick={() => handleDeleteItem(item.id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <input
+      type="text"
+      value={props.value}
+      onChange={handleInputChange}
+      onKeyPress={handleKeyPress}
+    />
   );
 }
 
