@@ -1,14 +1,12 @@
-
 import React from "react";
-import "./ListItem.css";
+import DeleteButton from "../Button/index.js";
 
-function ListItem() {
+function ListItem(props) {
   return (
-    <div className="ListItem">Listitem
-      <ul>
-      test list item
-      </ul>
-    </div>
+    <li>
+      {props.value}
+      <DeleteButton label="Delete" onClick={props.onDelete} />
+    </li>
   );
 }
 

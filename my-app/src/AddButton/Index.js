@@ -1,6 +1,6 @@
 import React from "react";
 
-function DeleteButton(props) {
+function AddButton(props) {
   return (
     <button onClick={props.onClick}>
       {props.label}
@@ -8,4 +8,4 @@ function DeleteButton(props) {
   );
 }
 
-export default DeleteButton;
+export default AddButton;
