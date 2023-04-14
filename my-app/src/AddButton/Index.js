@@ -1,8 +1,9 @@
 import React from "react";
+import "./AddButton.css";
 
 function AddButton(props) {
   return (
-    <button onClick={props.onClick}>
+    <button className="AddButton" onClick={props.onClick}>
       {props.label}
     </button>
   );

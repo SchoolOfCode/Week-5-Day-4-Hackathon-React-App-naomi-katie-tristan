@@ -2,3 +2,8 @@
   text-align: center;
 }
 
+.inputAndButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

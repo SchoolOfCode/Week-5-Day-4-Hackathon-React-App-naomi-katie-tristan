@@ -1,0 +1,5 @@
+.listItem { /* This was neccessary to stop the add button from wondering off below the input field */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }

@@ -1,22 +1,23 @@
 import React from "react";
+import "./Input.css";
 
-function Input(props) {
-  const handleInputChange = (e) => {
-    props.onChange(e.target.value);
+function Input(props) {  // This is a controlled component.
+  const handleInputChange = (e) => {   // This function is called when the user types in the input field.
+    props.onChange(e.target.value); // Update the state variable.
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      props.onEnter();
+  const handleKeyPress = (e) => { // This function is called when the user presses a key.
+    if (e.key === "Enter") { // If the user presses the Enter key, call the onEnter function.
+      props.onEnter(); // Call the onEnter function.
     }
   };
 
   return (
     <input
-      type="text"
-      value={props.value}
-      onChange={handleInputChange}
-      onKeyPress={handleKeyPress}
+      type="text" 
+      value={props.value} 
+      onChange={handleInputChange} // Call the handleInputChange function when the user types in the input field.
+      onKeyPress={handleKeyPress} // Call the handleKeyPress function when the user presses a key.
     />
   );
 }
