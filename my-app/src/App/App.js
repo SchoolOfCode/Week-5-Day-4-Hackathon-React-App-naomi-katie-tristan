@@ -9,14 +9,11 @@ import { useState } from 'react'
 
 function App() {
 
-  const [text, setText] = useState("");
 
-  function addListItem(event) { // event is an object that contains information about the event that triggered the function
-    setText(event.target.value); 
-  }
+
   return (
     <div className="App">
-    <Input onClick={addListItem} />
+    <Input />
 
     </div>
   );
