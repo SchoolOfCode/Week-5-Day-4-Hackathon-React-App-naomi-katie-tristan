@@ -17,9 +17,7 @@ function App() {
   return (
     <div className="App">
     <Input onClick={addListItem} />
-     <Button />
-     <List></List>
-     <ListItem></ListItem>
+
     </div>
   );
 }
